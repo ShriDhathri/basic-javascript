@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation</title>
+</head>
+<body id="body">
+    <ul id="element" data="valid">
+        <!-- here Id acts as a Global variable -->
+        <li class="listitem">First</li>
+        <li class="listitem">Second</li>
+        <li class="listitem">Third</li> 
+    </ul>
+    <div id="first" class="allDiv">First div </div>
+    <!-- <script> const allDiv = document.getElementsByClassName("allDiv")
+    console.log(allDiv)
+    </script> -->
+    <div class="allDiv">Second div</div>
+    <table>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+        <tr>
+            <td>Three</td>
+            <td>Four</td>
+        </tr>
+    </table>
+    <script>
+        // Root Node
+        // console.log(document.documentElement)
+        // console.log(document.body)
+        // console.log(document.head)
+
+        // // Childrens
+        // console.log(document.body.childNodes)
+        // console.log(document.body.children)
+        // for(node of document.body.childNodes) 
+        // console.log(document.body.childNodes)
+        // console.log(document.body.firstChild)
+        // console.log(document.body.lastChild)
+        // console.log(document.body.firstElementChild)
+        // console.log(document.body.lastElementChild)
+        // const childrensOfBody = Array.from(document.body.children)
+        // console.log(childrensOfBody)
+        
+
+        // Siblings
+        // const ulTag = document.body.children[0]
+        // firstLi = ulTag.children[0]
+        // secondLi = ulTag.children[1]
+        // console.log(secondLi.previousElementSibling.textContent)
+        // console.log(secondLi.nextElementSibling.textContent)
+
+        // Table DOM Manipulation 
+        // const tableTag = document.body.firstElementchil
+        // // console.log(tableTag.tBodies[0].rows[0].textContent)
+        // // console.log(tableTag.rows[0].textContent)
+        // console.log(tableTag.tBodies[0].rows[1].cells[1].style="background-color:blue")
+
+        // ID Search
+        // console.log(element.style.backgroundColor="blue")
+
+        // const ulTag=document.getElementById("element")
+        // console.log(ulTag.style.backgroundColor="red")
+
+        // const listItem = document.getElementsByClassName("list-Item")
+        // console.log( document.getElementsByTagName("table"))
+
+        // const listItem=document.querySelectorAll('#element')
+        // console.log(listItem)
+        
+        // const listItem=document.querySelectorAll('ul>li')
+        // // > represents that ul is Parent & li is Child
+        // console.log(listItem[2].textContent)
+
+        // console.log(allDiv)
+
+        // ATTRIBUTES
+       
+        // console.log(element.getAttribute('data'))
+        // // getAttribute is used to fetch the attribute which was defined by us not pre-defined
+        // console.log(element.setAttribute('order-placed','pending'))
+        // // We can define our own attribute by using setAttribute.Here 'order-placed' is the Attribute & 'Pending' is its value
+        // // console.log(element.getAttribute('order-placed'))
+        // // // here order-placed will give u its value pending
+        // console.log(element.hasAttribute('order-placed'))
+        // // we can check wheather the attribute is prsnt or not
+        // console.log(element.hasAttribute('pending')) 
+        // // console.log(element.removeAttribute('order-placed'))  
+        // // // can be removed like this
+        // // console.log(element.hasAttribute('order-placed')) 
+        // console.log(element.attributes)                   
+               
+        // Creating and removing the node elements
+        // 'APPEND' or' AFTER' WILL ADD THE TEXT AT THE BOTTOM
+        const newDiv = document.createElement('div')
+        // newDiv.textContent = "Namasthe"
+        // We can also add test like this
+        newDiv.innerHTML =`<ul id="element" data="valid">
+        <!-- here Id acts as a Global variable -->
+        <li class="listitem">First</li>
+        <li class="listitem">Second</li>
+        <li class="listitem">Third</li> 
+    </ul>`
+    // like this we can add HTML directly through script
+        body.append(newDiv)
+        //  // 'PREPEND' or 'BEFORE' WILL ADD THE TEXT AT THE TOP OF THE BODY
+        // body.prepend(newDiv)
+        const newText = document.createTextNode('Namasthe')
+        // will add Namasthe at the bottom of the body
+        // newDiv.appendChild(newText)
+        // first.replaceWith(newDiv)
+        // It will replace the word 'first div' with 'Namasthe'
+        // first.remove()
+        // will remove the first div
+       
+
+
+    </script>
+    
+    
+</body>
+
+</html>

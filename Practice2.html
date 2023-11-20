@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice2.html</title>
+</head>
+<body>
+    <a name="list">The list</a>
+    <ul id="links">
+        <li><a href="http://google.com" id="link1">http://google.com</a></li>
+        <li><a href="/tutorial" id="link2"></a>/tutorial</li>
+        <li><a href="local/path" id="link3">local/path</a></li>
+        <li><a href="ftp://ftp.com/my.zip" id="link4">ftp://ftp.com/my.zip</a></li>
+        <li><a href="http://nodejs.org" id="link5">http://nodejs.org</a></li>
+        <li><a href="http://internal.com/test" id="link6">http://internal.com/test</a></li>
+    </ul>
+    <script>
+        // console.log(document.getElementById("links").style.color="red")
+        const colors=["red","green","yellow","orange","blue","violet"]
+
+        const links=document.querySelectorAll("li>a");
+
+        links.forEach(function(link,index){
+            link.style.color=colors[index];
+        })
+        
+    </script>
+        
+</body>
+</html>
